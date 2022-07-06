@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+height: 100%;
+width: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.constainer {
+    width: 100%;
+    height: 50%;
+    background-color: orange;
+    display: grid;
+    
+}
+
+.display {
+    background-color: black;
+}
