@@ -1,14 +1,12 @@
 let computerScore = 0;
 let playerScore = 0;
-let display = document.querySelector('.display')
-
+let display = document.querySelector(".display");
 
 function computerPlay() {
   let choiceArray = ["rock", "paper", "scissors"];
   return choiceArray[~~(Math.random() * choiceArray.length)];
 }
 function playRound(playerSelection, computerSelection) {
-  
   const compareObj = {
     // Object {Key is what you're checking : value is the thing that beats it}
     rock: "paper",
@@ -16,7 +14,7 @@ function playRound(playerSelection, computerSelection) {
     scissors: "rock",
   };
   computerSelection = computerPlay(); //assings variable to return value of computerPlay()
-  
+
   if (compareObj[playerSelection] == computerSelection) {
     // checks if key's value is equal to computerSelection.
     computerScore++; //adds 1 to computerScore
@@ -28,18 +26,16 @@ function playRound(playerSelection, computerSelection) {
     display.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
     console.log(`You Win! ${playerSelection} beats ${computerSelection}`); //displays You Win! playerSelection beats computerSelection
   } else {
-    display.textContent = 'Tie!'
+    display.textContent = "Tie!";
   }
 }
 
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach(function (elem) {
   elem.addEventListener("click", function () {
-    
     playRound(this.textContent, computerPlay());
   });
 });
-
 
 // function game() {
 //   for (let i = 0; i < 5; i++) {
