@@ -20,14 +20,31 @@ body {
     align-items: center;
 }
 
-.constainer {
-    width: 100%;
+.container {
+    width: 90%;
     height: 50%;
-    background-color: orange;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
     
+
 }
 
 .display {
-    background-color: black;
+    background-color: white;
+    border: .5em solid black;
+    border-radius: .3em;
+    grid-column: 1/-1;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.btn {
+    font-size: 1.5em;
+    border: .3em solid black;
+    border-radius: .3em;
 }
