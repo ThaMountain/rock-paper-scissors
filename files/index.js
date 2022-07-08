@@ -14,6 +14,8 @@ function playRound(playerSelection, computerSelection) {
     scissors: "rock",
   };
   computerSelection = computerPlay(); //assings variable to return value of computerPlay()
+  let myArray = [...playerSelection];
+  console.log(myArray);
 
   if (compareObj[playerSelection] == computerSelection) {
     // checks if key's value is equal to computerSelection.
@@ -33,7 +35,8 @@ function playRound(playerSelection, computerSelection) {
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach(function (elem) {
   elem.addEventListener("click", function () {
-    playRound(this.textContent, computerPlay());
+    console.log(this.textContent);
+    playRound(this.textContent.replace(/\n|\s/g, ""), computerPlay());
   });
 });
 
